@@ -14,12 +14,15 @@ type Props = {
 
 const Navbar = ({ selectedPage, setSelectedPage,isTopOfPage }: Props) => {
   const flexBetween = 'flex items-center justify-between';
+  // As the width crosses 1060px , the isAboveMediumScreen becomes true;
   const isAboveMediumScreen = useMediaQuery('(min-width:1060px)');
+  
+  
   const [isMenuToggle, setIsMenuToggle] = useState(false);
   const navbarBackgroundTop = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
   return (
     <nav>
-      <div className={`${navbarBackgroundTop}${flexBetween} fixed top-0 z-30 w-full py-6`}>
+      <div className={`${navbarBackgroundTop}${flexBetween} fixed top-0 z-30 w-full py-6 `}>
         <div className={`${flexBetween} w-5/6 mx-auto`}>
           <div className={`${flexBetween} gap-16 w-full`}>
             {/* Left side */}

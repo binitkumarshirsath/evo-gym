@@ -4,3 +4,10 @@ export enum SelectedPage {
   OurClasses = 'ourclasses',
   ContactUs = 'contactus',
 }
+
+export interface BenefitsTypes{
+  icon : JSX.Element;
+  _id : number;
+  title : string;
+  description : string;
+}
