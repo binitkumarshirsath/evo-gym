@@ -4,6 +4,8 @@ import { SelectedPage } from '@/shared/types';
 import Home from './components/home';
 import Benefits from './components/benefits';
 import OurClasses from './components/our-classes';
+import ContactUs from './components/contact-us';
+import { Toaster } from 'react-hot-toast';
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
   const [isOnTopOfScreen, setIsOnTopOfScreen] = useState<boolean>(true);
@@ -28,6 +30,8 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
+      <Toaster />
     </div>
   );
 }
